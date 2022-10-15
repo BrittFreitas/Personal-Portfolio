@@ -1,0 +1,7 @@
+@use "./variables" as* ;
+
+footer {
+    background-color: $green;
+    color: $beige;
+    height: 20vh;
+}

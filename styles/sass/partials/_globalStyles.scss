@@ -1,0 +1,24 @@
+@use "./variables" as* ;
+body {
+    color: $primaryColor;
+    font-size: 62.5%;
+    background-color: $backgroundColor;
+}
+
+// wrapper {
+//     width: 90%;
+// }
+
+h1 {
+    font-family: 'Bona Nova', serif;
+    color: $primaryColor;
+    font-size: 5.0rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3.0rem;
+    text-transform: capitalize;
+}
+
