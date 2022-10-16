@@ -1,7 +1,38 @@
 @use "./variables" as* ;
 
 footer {
+    .footerContent {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
     background-color: $green;
     color: $beige;
     height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .footerLinks {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        
+        li {
+            margin-right: 20px;
+            font-size: 3.0rem;
+        }
+    }
+    .socialMediaIcons {
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        gap: 20px;
+        font-size: 3.0rem;
+        color: $beige;
+    }
+    .copyright {
+        text-align: center;
+        margin: 0;
+    }
 }

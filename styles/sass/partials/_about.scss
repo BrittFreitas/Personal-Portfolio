@@ -1,0 +1,39 @@
+@use "./variables" as *;
+
+.about {
+  height: 30vh;
+  background-color: $green;
+  color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .aboutContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  p {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    background-color: $beige;
+    color: $primaryColor;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    position: relative;
+  }
+
+  i {
+    position: absolute;
+  }
+}
+

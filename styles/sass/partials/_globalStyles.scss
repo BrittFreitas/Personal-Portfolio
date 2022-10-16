@@ -1,24 +1,37 @@
-@use "./variables" as* ;
-body {
-    color: $primaryColor;
-    font-size: 62.5%;
-    background-color: $backgroundColor;
+@use "./variables" as *;
+html {
+  font-size: 62.5%;
+  max-width: 100%;
 }
 
-// wrapper {
-//     width: 90%;
-// }
+body {
+  color: $primaryColor;
+  font-size: 1.6rem;
+  background-color: $backgroundColor;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
 
 h1 {
-    font-family: 'Bona Nova', serif;
-    color: $primaryColor;
-    font-size: 5.0rem;
-    text-transform: uppercase;
-    font-weight: 700;
+  font-family: "Bona Nova", serif;
+  color: $primaryColor;
+  font-size: 8rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: 0;
 }
 
 h2 {
-    font-size: 3.0rem;
-    text-transform: capitalize;
+  font-size: 6rem;
+  text-transform: capitalize;
+  margin: 0;
+ 
 }
 
+footer {
+  font-size: 2rem;
+}

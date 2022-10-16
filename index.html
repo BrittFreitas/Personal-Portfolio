@@ -17,52 +17,113 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <nav class="headerNav">
-      <ul>
-        <li>about</li>
-        <li>work</li>
-        <li>contact</li>
-      </ul>
-    </nav>
     <header class="headerText">
-      <h1>Brittany Freitas</h1>
-      <h2>front-end web developer</h2>
+      <nav class="headerNav">
+        <i class="fa-solid fa-bars-sort menu"></i>
+
+        <!-- Markup for slide-out Nav -->
+        <!-- <div class="slideOutNav">
+        <div class="closeContainer">
+            <i class="fa-solid fa-xmark-large close"></i>
+        </div> 
+        <nav>
+          <ul class="mainMenu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">Contact</a></li>
+  
+          </ul>
+        </nav>
+      </div> .slideOutNav end -->
+      </nav>
+
+      <div class="title wrapper">
+        <h1>Brittany Freitas</h1>
+        <h2>front-end web developer</h2>
+      </div>
     </header>
 
     <section class="about">
-      <div class="aboutContent">
+      <div class="aboutContent wrapper">
         <i class="fa-sharp fa-solid fa-quote-left"></i>
         <p>
-          Creating thoughtful web applications that make a meaningful impact
+          Creating thoughtful web applications that make a meaningful impact.
         </p>
         <i class="fa-sharp fa-solid fa-quote-right"></i>
-        <button class="myWork">check out my work</button>
+        <button class="getInTouch">Get in touch</button>
       </div>
     </section>
 
-    <section class="myWork">
-      <h2>my Recent Work</h2>
-      <i class="fa-solid fa-arrow-down-right"></i>
-      <div class="spaces">
-        <img src="." alt="" />
-      </div>
-      <div class="arora">
-        <img src="" alt="" />
-      </div>
-      <div class="restoMall">
-        <img src="" alt="" />
-      </div>
-      <div class="poetrivia">
-        <img src="" alt="" />
+    <section class="myWork wrapper">
+      <h2>Recent Work <i class="fa-solid fa-arrow-down rotate"></i></h2>
+     
+      <div class="projectGallery">
+        <div class="topRow">
+
+
+          <div class="spaces project">
+            <img class="firstImage" src="./assets/thumbnails/spacesThumbnail.jpg" alt="" />
+            <div class="overlay">
+              <h3>SPACES</h3>
+              <p>A PSD conversion of an architecture studio site using HTML and CSS</p>
+            </div>
+          </div>
+
+
+
+          <div class="arora project">
+            <img class="secondImage"src="./assets/thumbnails/aroraThumbail.jpg" alt="" />
+            <div class="overlay">
+              <h3>ARORA Jewelers</h3>
+              <p> A PSD conversion of a jewlery brand site using HTML and CSS</p>
+            </div>
+          </div>
+
+
+          <div class="thoughtRecord project">
+            <img src="./assets/thumbnails/thoughtRecord.jpg" alt="" />
+            <div class="overlay">
+              <h3>CBT Thought Record</h3>
+              <p> A mental health tool for clients to process their thoughts. Built with HTML, CSS and JQuery</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottomRow">
+          <div class="nbaStats project">
+            <img src="./assets/thumbnails/nbaStatsThumbnail.png" alt="" />
+            <div class="overlay">
+              <h3>NBA Stats Generator</h3>
+              <p>A web application to search NBA team stats. Created with the balldontlie API. Built with with HTML, CSS, and JQuery.</p>
+            </div>
+          </div>
+
+          <div class="poetrivia project">
+            <img src="./assets/thumbnails/poetryTriviaThumbnail.jpg" alt="" />
+            <div class="overlay">
+              <h3> Poetry Trivia </h3>
+              <p> An interactive trivia game built with the Poetrydb API in collaboration with <a href="">Tina Lu</a>. This project uses javaScript, HTML, CSS and SCSS </p>
+            </div>
+          </div>
+
+          <div class="restoMall project">
+            <img src="./assets/thumbnails/restaurantMallThumbnail.jpg" alt="" />
+            <div class="overlay">
+              <h3>Restaurant Mall</h3>
+              <p> A multi-page responsive PSD conversion built with HTML, CSS and SCSS.</p>
+            </div>
+          </div>
+          
+        </div>
       </div>
     </section>
 
-    <section class="mySkills">
-      <h2>My Skills</h2>
-      <i class="fa-solid fa-arrow-down-right"></i>
+    <section class="mySkills wrapper">
+      <h2>Skills <i class="fa-solid fa-arrow-down rotate"></i></h2>
       <div>
-        <ul>
+        <ul class="skillsList">
           <li>HTML5</li>
           <li>CSS3</li>
           <li>Sass</li>
@@ -80,15 +141,20 @@
     </section>
 
     <section class="contact">
+      <div class="wrapper">
       <h2>Have a project in mind?</h2>
       <p>I take on freelance work! Send me an email to collaborate.</p>
       <div class="contactForm">
         <form>
           <div class="names">
+            <div class="first">
             <label for="first">First Name</label>
-            <input type="text" id="fname" name="firstname" required />
+            <input class="fname" type="text" id="fname" name="firstname" required />
+          </div>
+          <div class="last">
             <label for="last">Last Name</label>
-            <input type="text" id="last" name="last" required />
+            <input class="fname" type="text" id="last" name="last" required />
+          </div>
           </div>
           <div class="message">
             <label for="email">Email</label>
@@ -106,23 +172,32 @@
           </div>
         </form>
       </div>
+    </div>
     </section>
 
     <footer>
-      <div class="socialMediaIcons">
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-github"></i>
-      </div>
-      <div class="footerNav">
-        <nav>
-          <ul>
-            <li>about</li>
-            <li>work</li>
-            <li>contact</li>
-          </ul>
-        </nav>
-      </div>
-      <p class="copyright"> <i class="fa-regular fa-copyright"></i>2022 Brittany Freitas</p>
+      <div class="footerContent wrapper">
+       
+        <div class="footerNav">
+          <nav>
+            <ul class="footerLinks">
+              <li><a>about</a></li>
+              <li><a>work</a></li>
+              <li><a>contact</a></li>
+              <li><a href="" download="">resume</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="socialMediaIcons">
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+       </div>
+        <p class="copyright">
+          <i class="fa-regular fa-copyright"></i> 2022 Brittany Freitas
+        </p>
+     
     </footer>
 
     <script src="./script.js"></script>

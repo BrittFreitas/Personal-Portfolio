@@ -1,0 +1,16 @@
+@use "./variables" as *;
+
+.mySkills {
+    height: 60vh;
+    font-size: 3.0rem;
+    display: flex;
+    flex-direction: column;
+
+    .rotate {
+        transform: rotate(-45deg);
+    }
+    .skillsList {
+      list-style-type: none;
+      display: flex;
+    }
+  }

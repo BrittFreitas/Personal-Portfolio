@@ -1,8 +1,52 @@
-
+@use "./variables" as *;
 
 header {
-    background: url(../assets/curtainsHeader.jpg) no-repeat;
-    background-size: cover;
-    height: 70vh;
-    opacity: 40%;
+  background: url(../assets/headerTest.jpg) no-repeat;
+  background-size: cover;
+  height: 70vh;
+  //opacity: 50%;
+  h2 {
+    font-style: italic;
+    font-weight: light;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+  }
+}
+
+nav {
+  .menu {
+    color: $green;
+    font-size: 5rem;
+    height: 10vh;
+  }
+}
+
+// //slide out nav styling here
+// .slideOutNav {
+//     display: none;
+//   background-color:$green;
+//   color: $backgroundColor;
+//   width: 100%;
+//   max-width: 500px;
+//   padding: 35px 50px;
+//   border-right: 1px solid #f4fcff;
+//   height: 100vh;
+//   position: fixed;
+//   top: 0;
+//   //left: -506px;
+//   transition: 0.75s;
+
+.mainMenu {
+  list-style-type: none;
+}
+
+.closeContainer {
+  width: 100%;
+  .close {
+    color: $beige;
+  }
 }
