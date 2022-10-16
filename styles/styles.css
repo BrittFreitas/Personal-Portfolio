@@ -262,6 +262,28 @@ footer {
   font-size: 2rem;
 }
 
+button {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rgb(202, 202, 176);
+  color: rgb(72, 64, 54);
+  padding: 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  position: relative;
+}
+button:hover {
+  background: rgba(202, 202, 176, 0.6);
+  border: 1px solid rgb(202, 202, 176);
+  color: rgb(72, 64, 54);
+}
+button:focus {
+  background-color: #ECECE4;
+  color: #4B4E36;
+}
+
 footer {
   background-color: #4B4E36;
   color: rgb(202, 202, 176);
@@ -336,6 +358,7 @@ header .title {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding-top: 250px;
 }
 
 nav .menu {
@@ -394,18 +417,22 @@ nav .menu {
       -ms-flex-align: center;
           align-items: center;
 }
-.about button {
-  background-color: rgb(202, 202, 176);
-  color: rgb(72, 64, 54);
-  padding: 20px;
-  border: none;
-  border-radius: 25px;
-  font-size: 1.6rem;
-  text-transform: capitalize;
+.about div.text {
   position: relative;
 }
-.about i {
+.about div.text i.fa-solid.fa-quote-left {
+  font-size: 4rem;
   position: absolute;
+  left: -60px;
+}
+.about div.text i.fa-solid.fa-quote-right {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .myWork {
@@ -516,7 +543,8 @@ nav .menu {
 }
 
 .mySkills {
-  height: 60vh;
+  height: 70vh;
+  width: 100%;
   font-size: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -525,16 +553,57 @@ nav .menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.mySkills i {
+  font-size: 5rem;
 }
 .mySkills .rotate {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.mySkills .skillsList {
+.mySkills .skillsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.mySkills .skillsContainer .topSkills, .mySkills .skillsContainer .bottomSkills {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+  text-align: center;
+}
+.mySkills .skillsContainer .bottomSkills {
+  padding-top: 30px;
+}
+.mySkills .skillsContainer .skillsList {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
 }
 
 .contact {
@@ -543,6 +612,18 @@ nav .menu {
 }
 .contact p {
   font-size: 3rem;
+}
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .contact form input, .contact form textarea {
   background-color: #ECECE4;

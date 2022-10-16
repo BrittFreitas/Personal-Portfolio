@@ -21,19 +21,28 @@
     justify-content: center;
     align-items: center;
   }
-  button {
-    background-color: $beige;
-    color: $primaryColor;
-    padding: 20px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.6rem;
-    text-transform: capitalize;
+  div.text {
     position: relative;
+    i.fa-solid.fa-quote-left {
+      font-size: 4rem;
+      position: absolute;
+      left: -60px;
+    }
+    i.fa-solid.fa-quote-right {
+      position: absolute;
+      display: flex;
+      align-items: flex-end;
+
+    }
   }
 
-  i {
-    position: absolute;
-  }
+  // i {
+  //   position: absolute;
+  //   top: 0;
+  // //   left: 0;
+  // // }
+
+  // .fa-quote-right {
+  //   top
+  // }
 }
-

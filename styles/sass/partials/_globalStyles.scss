@@ -29,9 +29,31 @@ h2 {
   font-size: 6rem;
   text-transform: capitalize;
   margin: 0;
- 
 }
 
 footer {
   font-size: 2rem;
+}
+
+button {
+  transition: 0.5s;
+
+  background-color: $beige;
+  color: $primaryColor;
+  padding: 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  position: relative;
+
+  &:hover {
+    background: rgb(202, 202, 176, 0.6);
+    border: 1px solid $beige;
+    color: $primaryColor;
+  }
+  &:focus {
+    background-color: $backgroundColor;
+    color: $green;
+  }
 }
