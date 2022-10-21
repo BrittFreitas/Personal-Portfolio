@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+.thanksPage {
+    width: 100%;
+    color: $green;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: $green;
+        font-size: 6.0rem;
+        text-transform: none;
+    }
+
+    i {
+        font-size: 7rem;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 2.5rem;
+        font-style: italic;
+    }
+
+}

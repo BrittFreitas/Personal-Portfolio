@@ -20,46 +20,57 @@
 
   <body>
     <header class="headerText">
-      <nav class="headerNav">
-        <i class="fa-solid fa-bars-sort menu"></i>
-
+      <nav class="navBar">
+        <div class="wrapper">
+          <button class="menuIcon">
+            <i class="fa-solid fa-bars menuIcon"></i>
+          </button>
+        </div> <!-- .wrapper ends -->
+    
         <!-- Markup for slide-out Nav -->
-        <!-- <div class="slideOutNav">
-        <div class="closeContainer">
-            <i class="fa-solid fa-xmark-large close"></i>
-        </div> 
-        <nav>
-          <ul class="mainMenu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">work</a></li>
-            <li><a href="#">Contact</a></li>
-  
-          </ul>
-        </nav>
-      </div> .slideOutNav end -->
-      </nav>
-
+        <div class="slideOutNav">
+          <div class="buttonContainer">
+            <button class="exit">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div> <!-- .buttonContainer end-->
+          <nav>
+            <ul class="mainMenu">
+              <li><a href="#banner">About</a></li>
+              <li><a href="#myWork">My Work</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div> <!-- .slideOutNav end -->
+      </nav> <!-- .navBar end -->
+    
       <div class="title wrapper">
         <h1>Brittany Freitas</h1>
         <h2>front-end web developer</h2>
       </div>
     </header>
 
-    <section class="about">
-      <div class="aboutContent wrapper">
-        <div class="text">
-          <i class="fa-solid fa-quote-left"></i>
+    <section class="banner" id="banner">
+      <div class="bannerContent wrapper">
           <p>
             Creating thoughtful web applications that make a meaningful impact.
-          </p>
-          <i class="fa-solid fa-quote-right"></i>
-        </div>
-        <button class="getInTouch">Get in touch</button>
+          </p> 
+          <button class="getInTouch">Check out my work</button>
       </div>
     </section>
 
-    <section class="myWork wrapper">
-      <h2>Recent Work <i class="fa-solid fa-arrow-down rotate"></i></h2>
+    <section class="about">
+      <h2>Hi, I'm Britt.</h2>
+
+      <div class="content">
+        <p>I’m a web developer based out of Toronto, Canada with an aim to leverage tech to make a social impact. I'm also a career switcher with a background in social work, where I learned the art of working alongside clients to actualize their goals. I love merging my clinical social work experience with my technical skillset to create meaningful and accessible web applications. I’m a creative problem solver and an adaptive relationship builder by nature eager to take on fun projects. Outside of work, you can find me rock climbing, hiking, or binge watching interior design content on Youtube. 
+        </p>
+        <button>Get In touch</button>
+     </div>
+    </section>
+
+    <section class="myWork wrapper" id="myWork">
+      <h2>Recent Work </h2>
 
       <div class="projectGallery">
         <div class="topRow">
@@ -141,7 +152,7 @@
     </section>
 
     <section class="mySkills wrapper">
-      <h2>Skills <i class="fa-solid fa-arrow-down rotate"></i></h2>
+      <h2>Skills</h2>
       <div class="skillsContainer">
         <div class="topSkills">
         <ul class="skillsList">
@@ -198,48 +209,39 @@
       </div>
     </section>
 
-    <section class="contact">
-      <div class="wrapper">
+    <section class="contact" id="contact">
+      <div class="wrapper sectionItems">
         <h2>Have a project in mind?</h2>
-        <p>I take on freelance work! Send me an email to collaborate.</p>
-        <div class="contactForm">
-          <form>
-            <div class="names">
-              <div class="first">
-                <label for="first">First Name</label>
-                <input
-                  class="fname"
-                  type="text"
-                  id="fname"
-                  name="firstname"
-                  required
-                />
+        <p>I take on freelance work and love collaborating!</p>
+        <p>Send me an email to get in touch.</p>
+        <div class="formContainer">
+
+            <input type="hidden" name="_captcha" value="false" >
+            <input type="hidden" name="thanks" value="https://brittanyfreitas.com/pages/thanks.html">
+
+          <form  action="https://formsubmit.co/brittanyfreitas9@gmail.com" method="POST" >
+              <div class="formItem">
+                <label for="name">TEST</label>
+                <input class="name" type="text" id="name" name="name" required />
               </div>
-              <div class="last">
-                <label for="last">Last Name</label>
-                <input
-                  class="fname"
-                  type="text"
-                  id="last"
-                  name="last"
-                  required
-                />
-              </div>
-            </div>
-            <div class="message">
+            <label></label>
+
+          
+            <div class="formItem">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" required/>
+            </div>
+
+            <div class="formItem">
               <label for="subject">Subject</label>
               <input type="text" required />
-              <label for="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                cols="20"
-                rows="10"
-                required=""
-              ></textarea>
             </div>
+
+            <div class="formItem">
+              <label for="message">Message</label>
+              <textarea name="message" id="message"  cols="20" rows="10" required></textarea>
+            </div>
+            <button type="submit">Send</button>
           </form>
         </div>
       </div>

@@ -1,0 +1,14 @@
+@use "./variables" as *;
+
+.about {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+
+
+    .content {
+        width: 30%;
+    }
+}

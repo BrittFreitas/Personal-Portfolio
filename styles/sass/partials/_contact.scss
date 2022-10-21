@@ -1,51 +1,107 @@
 @use "./variables" as *;
 
+// .contact {
+//   height: 100vh;
+//   width: 100%;
+//     p {
+//       font-size: 3rem;
+//       text-align: center;
+//     }
+
+// form {
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+
+//     input, textarea {
+//         background-color: $backgroundColor;
+//         font-size: 2rem;
+//
+//         width: 50%;
+//         gap: 20px;
+
+//     }
+
+//     .names {
+//         width: 100%;
+//         display: flex;
+//         justify-content:space-evenly;
+//         .first, .last {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         .fname, .lname {
+//             width: 100%;
+//         }
+//     }
+//     }
+
+//     .message {
+//       display: flex;
+//       flex-direction: column;
+//       align: center;
+//       width: 100%;
+//     }
+//   }
+// }
+
 .contact {
-    height: 60vh;
-    background-size: cover;
-    p {
-      font-size: 3rem;
+  height: 90vh;
+
+  p {
+    font-size: 2.0rem;
+    margin: 0;
+  }
+
+  .sectionItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+  }
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100vh;
+  margin: 0 auto;
+
+  form {
+    width: 90%;
+    max-width: 600px;
+
+    button {
+      background-color: $green;
+      color: $beige;
+      width: 40%;
+      align-content: center;
+      font-size: 2.0rem;
     }
-  
-form {
-    
-display: flex;
-flex-direction: column;
-align-items: center;
-    input, textarea {
-        background-color: $backgroundColor;
-        font-size: 2rem;
-        border-bottom: 2px solid $primaryColor;
-        border-style: inset;
-        border-radius: 25px;
-        width: 50%;
-        gap: 20px;
+    label {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      color: $green;
     }
 
-    .names {
-        width: 50%;
-        display: flex;
-        justify-content:space-between;
-        .first, .last {
-        //width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-       
-        
-        .fname, .lname {
-            width: 100%;
-        }
-    }
-    }
-    
-    .message {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-     // align-items: center;
+    input,
+    textarea {
       width: 100%;
-      
+      padding: 10px;
+      outline: 0;
+      border: 1px solid $primaryColor;
+      background: transparent;
+    }
+
+    .formItem {
+      margin-bottom: 30px;
+      position: relative;
     }
   }
 }
+}
+
+

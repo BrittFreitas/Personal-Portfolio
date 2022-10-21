@@ -1,13 +1,17 @@
 @use "./variables" as *;
 
 .mySkills {
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     font-size: 3.0rem;
     display: flex;
     flex-direction: column;
     //align-items: center;
     justify-content: space-evenly; 
+
+    h2 {
+        padding-left: 50px;
+    }
 
     i {
         font-size: 5.0rem;

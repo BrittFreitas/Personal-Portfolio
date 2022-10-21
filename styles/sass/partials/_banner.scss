@@ -1,6 +1,6 @@
 @use "./variables" as *;
 
-.about {
+.banner {
   height: 30vh;
   background-color: $green;
   color: beige;
@@ -9,7 +9,7 @@
   align-items: center;
   position: relative;
 
-  .aboutContent {
+  .bannerContent {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -21,19 +21,7 @@
     justify-content: center;
     align-items: center;
   }
-  div.text {
-    position: relative;
-    i.fa-solid.fa-quote-left {
-      font-size: 4rem;
-      position: absolute;
-      left: -60px;
-    }
-    i.fa-solid.fa-quote-right {
-      position: absolute;
-      display: flex;
-      align-items: flex-end;
-
-    }
+  
   }
 
   // i {
@@ -45,4 +33,4 @@
   // .fa-quote-right {
   //   top
   // }
-}
+
