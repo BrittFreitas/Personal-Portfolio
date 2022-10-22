@@ -1,48 +1,18 @@
 @use "./variables" as *;
 
 
-
-
-// * {
-//   position: relative;
-//   box-sizing: border-box;
-// }
-
-// .iframely-embed {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 50;
-//   background: white;
-// }
-
 #app {
-  
   z-index: 100;
-
-  &:hover {
-    opacity: 0.5;
-  }
 }
 
 #app {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
-  padding-bottom: 4vmin;
   height: 90vh;
-  width: 100%;
-  background: #ede8e2;
   color: #3a3535;
 }
 
-// body {
-//   display: grid;
-//   padding: 3vmin;
-//   background: #e6ded7;
-// }
 
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 
@@ -55,12 +25,7 @@
   font-size: 8vw;
   width: 100%;
   z-index: 2;
-
-  // start
-
-  > .title-inner {
-    display: inline-block;
-  }
+  
 }
 
 @keyframes text-clip {
@@ -97,7 +62,6 @@
 }
 
 
-
 .title-inner {
   display: inline-block;
   animation: inner-left 1s 1s ease both;
@@ -126,13 +90,6 @@
 
 .mozart {
   display: inline-block;
-}
-
-
-
-// Replay animation!
-body:active * {
-  animation: none !important;
 }
 
 
@@ -231,8 +188,8 @@ header {
       }
       a {
         color: $beige; 
-        list-style-type: none;
-        border-bottom: none;
+        text-decoration: none;
+        padding-left: 50px;
       }
     }
 

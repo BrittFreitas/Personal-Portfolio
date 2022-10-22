@@ -4,11 +4,29 @@
     height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
 
+    .aboutContent {
+    height: 30vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 20px;
+    }
+
+    p {
+        font-size: 1.9rem;
+    }
 
     .content {
-        width: 30%;
+        width: 40%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    button {
+    width: 30%;
+    background-color: $green;
+    color: $beige;
     }
 }

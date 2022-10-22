@@ -6,6 +6,11 @@ footer {
         justify-content: space-between;
         margin-top: 40px;
     }
+
+    a {
+        color: $beige;
+        text-decoration: none;
+    }
     background-color: $green;
     color: $beige;
     height: 20vh;
