@@ -29,25 +29,58 @@
     
         <!-- Markup for slide-out Nav -->
         <div class="slideOutNav">
-          <div class="buttonContainer">
             <button class="exit">
               <i class="fa-solid fa-xmark"></i>
             </button>
-          </div> <!-- .buttonContainer end-->
+        
           <nav>
             <ul class="mainMenu">
-              <li><a href="#banner">About</a></li>
-              <li><a href="#myWork">My Work</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a class="scroll" href="#banner">About</a></li>
+              <li><a class="scroll" href="#myWork">My Work</a></li>
+              <li><a class="scroll" href="#contact">Contact</a></li>
             </ul>
           </nav>
         </div> <!-- .slideOutNav end -->
       </nav> <!-- .navBar end -->
     
-      <div class="title wrapper">
+      <!-- <div class="title wrapper">
         <h1>Brittany Freitas</h1>
         <h2>front-end web developer</h2>
-      </div>
+      </div> -->
+
+
+
+      <div id="app">
+        <div class="title">
+          <div class="title-inner">
+            <div class="cafe">
+              <div class="cafe-inner">Brittany Freitas</div>
+            </div>
+            <div class="mozart">
+              <div class="mozart-inner">Front-end Developer</div>
+            </div>
+          </div>
+        </div>
+      
+       
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </header>
 
     <section class="banner" id="banner">
@@ -55,7 +88,7 @@
           <p>
             Creating thoughtful web applications that make a meaningful impact.
           </p> 
-          <button class="getInTouch">Check out my work</button>
+          <button class="checkOutWork">Check out my work</button>
       </div>
     </section>
 
@@ -65,11 +98,13 @@
       <div class="content">
         <p>I’m a web developer based out of Toronto, Canada with an aim to leverage tech to make a social impact. I'm also a career switcher with a background in social work, where I learned the art of working alongside clients to actualize their goals. I love merging my clinical social work experience with my technical skillset to create meaningful and accessible web applications. I’m a creative problem solver and an adaptive relationship builder by nature eager to take on fun projects. Outside of work, you can find me rock climbing, hiking, or binge watching interior design content on Youtube. 
         </p>
-        <button>Get In touch</button>
+        <button class="getInTouch">Get In touch</button>
      </div>
     </section>
 
-    <section class="myWork wrapper" id="myWork">
+    <section class="myWork " id="myWork">
+      <div class="myWorkContent wrapper">
+
       <h2>Recent Work </h2>
 
       <div class="projectGallery">
@@ -149,9 +184,11 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
 
     <section class="mySkills wrapper">
+      
       <h2>Skills</h2>
       <div class="skillsContainer">
         <div class="topSkills">
@@ -260,9 +297,9 @@
           </nav>
         </div>
         <div class="socialMediaIcons">
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-github"></i>
-          <i class="fa-solid fa-envelope"></i>
+          <a href="https://www.linkedin.com/in/brittany-freitas/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/BrittFreitas"><i class="fa-brands fa-github"></i></a>
+          <a href="https://calendly.com/brittanyfreitas"><i class="fa-solid fa-calendar-check"></i></a> 
         </div>
       </div>
       <p class="copyright">

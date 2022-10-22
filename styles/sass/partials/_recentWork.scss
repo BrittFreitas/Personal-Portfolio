@@ -2,8 +2,12 @@
 
 
 .myWork {
-    height: 100vh;
+  height: 100vh; 
+  background-color: $beige;
+  .myWorkContent {
+   
     align-content: center;
+   
 
     .rotate {
         transform: rotate(-45deg);
@@ -35,6 +39,8 @@
   .bottomRow {
     margin-top: 30px;
   }
+  }
+   
 }
 
 
