@@ -1,144 +1,34 @@
 @use "./variables" as *;
 
 
-#app {
-  z-index: 100;
-}
-
-#app {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  height: 90vh;
-  color: #3a3535;
-}
-
-
-@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
-
-.title {
-  padding-left: 1em;
-  grid-column: 1 / -1;
-  grid-row: 1;
-
-  font-family: "Prata", serif;
-  font-size: 8vw;
-  width: 100%;
-  z-index: 2;
-  
-}
-
-@keyframes text-clip {
-  from {
-    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  }
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
-@keyframes outer-left {
-  from {
-    transform: translateX(50%);
-  }
-  to {
-    transform: none;
-  }
-}
-
-@keyframes inner-left {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: none;
-  }
-}
-
-.cafe,
-.mozart {
-  animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-
-}
-
-
-.title-inner {
-  display: inline-block;
-  animation: inner-left 1s 1s ease both;
-}
-
-.cafe-inner {
-  display: inline-block;
-  animation: inner-left 1s 1s ease both,
-    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
-
-.mozart-inner {
-  animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
-
-.title {
-  animation: outer-left 1s 1s ease both;
-}
-
-.cafe {
-  // start
-  > .cafe-inner {
-    display: inline-block;
-  }
-}
-
-.mozart {
-  display: inline-block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 header {
-  background: url(../assets/headerTest.jpg) no-repeat;
+  background: url(../assets/image-1.jpg) no-repeat;
   background-size: cover;
   height: 70vh;
-  background-attachment: fixed;
+  //background-attachment: fixed;
   list-style-type: none;
-  h2 {
-    font-style: italic;
-    font-weight: light;
-  }
+  
   .title {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-top: 250px;
+    padding-top: 180px;
+    padding-left: 100px;
+
+    animation: slideInH1 2s;
   }
 }
+@keyframes slideInH1 {
+  0% {
+transform: translate(-500px);
+opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
 
 
 .navBar {

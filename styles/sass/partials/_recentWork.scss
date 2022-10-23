@@ -8,15 +8,16 @@
   align-items: center;
   justify-content: center;
   .myWorkContent {
-   
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
     align-content: center;
-   
-
+  
     .rotate {
         transform: rotate(-45deg);
     }
 
-    h2 {
+    h3 {
         padding-bottom: 50px;
     }
   .arrow {
