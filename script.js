@@ -4,6 +4,7 @@ const menuButton = document.querySelector('.menuIcon');
 const closeNav = document.querySelector('.exit', ".scroll");
 const slideMenu = document.querySelector('.slideOutNav');
 
+
 //attaching an event listener to my menu so that on click it adds the class of .open
 menuButton.addEventListener ("click", () => {
     slideMenu.classList.add('open');
@@ -26,3 +27,14 @@ getInTouch.addEventListener("click", () => {
     const contact = document.querySelector('.contact')
     contact.scrollIntoView({behavior: "smooth"})
 });
+
+const watchForScroll = new IntersectionObserver( event => {
+    event.forEach(event => {
+        if (event.isIntersecting) {
+            event.target.classList.add('animation')
+        }
+      });
+})
+
+const projectGallery = document.querySelector('.projectGallery')
+watchForScroll.observe(projectGallery);

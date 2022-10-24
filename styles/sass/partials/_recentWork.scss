@@ -1,5 +1,5 @@
 @use "./variables" as *;
-@use "./mediaQueries" as *;
+@use "./mixins" as *;
 
 .myWork {
   height: 100vh;
@@ -30,6 +30,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
+     
+
 
       @include mobileLarge {
         flex-direction: row;
@@ -44,6 +46,22 @@
         }
       }
     }
+
+    .animation {
+      animation: slideUp 1.5s;
+    }
+
+    @keyframes slideUp {
+      0% {
+    transform: translate(0, 300px);
+    opacity: 0;
+      }
+      100% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+
     .bottomRow,
     .topRow {
       display: flex;
@@ -91,6 +109,11 @@
     opacity: 0;
     transition: opacity 0.8s;
     font-size: 1.8rem;
+
+    a {
+      color: $beige;
+      text-decoration: none;
+    }
 
     .overlayContent {
       display: flex;

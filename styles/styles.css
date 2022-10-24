@@ -632,6 +632,34 @@ header .title {
             align-items: flex-end;
   }
 }
+.myWork .myWorkContent .animation {
+  -webkit-animation: slideUp 1.5s;
+          animation: slideUp 1.5s;
+}
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translate(0, 300px);
+            transform: translate(0, 300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translate(0, 300px);
+            transform: translate(0, 300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 .myWork .myWorkContent .bottomRow,
 .myWork .myWorkContent .topRow {
   display: -webkit-box;
@@ -689,6 +717,10 @@ header .title {
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
   font-size: 1.8rem;
+}
+.project .overlay a {
+  color: #d1cec2;
+  text-decoration: none;
 }
 .project .overlay .overlayContent {
   display: -webkit-box;
