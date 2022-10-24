@@ -30,8 +30,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-     
-
 
       @include mobileLarge {
         flex-direction: row;
@@ -50,18 +48,6 @@
     .animation {
       animation: slideUp 1.5s;
     }
-
-    @keyframes slideUp {
-      0% {
-    transform: translate(0, 300px);
-    opacity: 0;
-      }
-      100% {
-        transform: translate(0, 0);
-        opacity: 1;
-      }
-    }
-
     .bottomRow,
     .topRow {
       display: flex;
@@ -90,6 +76,7 @@
   }
 }
 
+//styling for overlay and overlay animation below
 .project {
   position: relative;
   width: 30%;
@@ -158,5 +145,17 @@
       margin: 0;
       font-size: clamp(0.8rem, 2vw, 3rem);
     }
+  }
+}
+
+//Keyframe for slide up gallery here
+@keyframes slideUp {
+  0% {
+    transform: translate(0, 300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }
