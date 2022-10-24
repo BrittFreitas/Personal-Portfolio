@@ -634,8 +634,8 @@ header .title {
   }
 }
 .myWork .myWorkContent .animation {
-  -webkit-animation: slideUp 1.5s;
-          animation: slideUp 1.5s;
+  -webkit-animation: slideUp 2s;
+          animation: slideUp 2s;
 }
 .myWork .myWorkContent .bottomRow,
 .myWork .myWorkContent .topRow {
