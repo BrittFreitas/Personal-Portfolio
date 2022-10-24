@@ -10,6 +10,12 @@
   position: relative;
   width: 100%;
 
+  button {
+    width: 15%;
+    min-width: 130px;
+    font-size: clamp(1rem, 1vw, 1.6rem);
+  }
+
   .bannerContent {
     display: flex;
     align-items: center;
@@ -17,10 +23,11 @@
   }
 
   p {
-    font-size: 3rem;
+    font-size: clamp(1.6rem, 2vw, 3rem);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   
   }

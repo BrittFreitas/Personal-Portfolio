@@ -7,7 +7,6 @@ html {
 
 body {
   color: $primaryColor;
-  font-size: 1.6rem;
   background-color: $backgroundColor;
 }
 
@@ -21,20 +20,16 @@ h1 {
   font-family: 'Red Hat Display', sans-serif;
   text-transform: uppercase;
   color: $primaryColor;
-  font-size: 16rem;
+  font-size: clamp(4rem, 10vw, 10rem);
   font-weight: 400;
   margin: 0;
   display: flex;
   flex-direction: column;
   line-height: 0.8;
-  width: 60%; 
 }
 
-
-
-
 h2 {
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem);//5rem;
   margin: 0;
   font-family:  'Playfair Display', serif;
   font-weight: 400;
@@ -44,7 +39,11 @@ h3 {
   font-family: 'Red Hat Display', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 6rem;
+  font-size: clamp(2rem, 5vw, 6rem);
+  margin: 0;
+}
+
+h4 {
   margin: 0;
 }
 
@@ -56,13 +55,13 @@ button {
   transition: 0.5s;
   background-color: $backgroundColor;
   color: $primaryColor;
-  padding: 20px;
+  padding: 15px;
   border: none;
   border-radius: 25px;
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
   text-transform: capitalize;
   position: relative;
-  min-width: 150;
+  min-width: 75px;
   &:hover {
     background: rgb(202, 202, 176, 0.6);
     border: 1px solid $beige;

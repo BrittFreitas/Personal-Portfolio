@@ -1,21 +1,33 @@
 @use "./variables" as *;
+@use "./mediaQueries" as *;
 
 
 header {
-  background: url(../assets/image-1.jpg) no-repeat;
+  background: url(../assets/headerPhoto.jpg) no-repeat;
   background-size: cover;
   height: 70vh;
-  //background-attachment: fixed;
   list-style-type: none;
+
+  @include mobileLarge {
+    height: 50vh;
+  }
   
   .title {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-top: 180px;
-    padding-left: 100px;
+    padding-top: 200px;
+    padding-left: 150px;
 
     animation: slideInH1 2s;
+
+    @include tablet {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+    }
   }
 }
 @keyframes slideInH1 {
@@ -69,24 +81,29 @@ opacity: 0;
 
     .mainMenu {
       list-style-type: none;
+      
     }
 
     nav {
       li {
-        padding: 25px;
+        padding: 25px 0;
        
       }
       a {
         color: $beige; 
         text-decoration: none;
         padding-left: 50px;
+
+        @include mobile {
+          padding: 0px;
+        }
       }
     }
 
     
     .mainMenu a {
       font-size: 3rem;
-      //color: $beige;
+      
       &:hover {
         color: $backgroundColor;
       }

@@ -234,7 +234,6 @@ html {
 
 body {
   color: #3a3734;
-  font-size: 1.6rem;
   background-color: #bebbae;
 }
 
@@ -248,7 +247,7 @@ h1 {
   font-family: "Red Hat Display", sans-serif;
   text-transform: uppercase;
   color: #3a3734;
-  font-size: 16rem;
+  font-size: clamp(4rem, 10vw, 10rem);
   font-weight: 400;
   margin: 0;
   display: -webkit-box;
@@ -259,11 +258,10 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   line-height: 0.8;
-  width: 60%;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem);
   margin: 0;
   font-family: "Playfair Display", serif;
   font-weight: 400;
@@ -273,7 +271,11 @@ h3 {
   font-family: "Red Hat Display", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 6rem;
+  font-size: clamp(2rem, 5vw, 6rem);
+  margin: 0;
+}
+
+h4 {
   margin: 0;
 }
 
@@ -286,13 +288,13 @@ button {
   transition: 0.5s;
   background-color: #bebbae;
   color: #3a3734;
-  padding: 20px;
+  padding: 15px;
   border: none;
   border-radius: 25px;
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
   text-transform: capitalize;
   position: relative;
-  min-width: 150;
+  min-width: 75px;
 }
 button:hover {
   background: rgba(202, 202, 176, 0.6);
@@ -319,6 +321,9 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+footer p, footer a, footer i {
+  font-size: clamp(2.2rem, 2vw, 2rem);
+}
 footer .footerContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -327,6 +332,17 @@ footer .footerContent {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 40px;
+}
+@media (max-width: 500px) {
+  footer .footerContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 footer a {
   color: #d1cec2;
@@ -357,16 +373,22 @@ footer .socialMediaIcons {
   font-size: 3rem;
   color: #d1cec2;
 }
-footer .copyright {
+footer .copyright, footer .fa-copyright {
   text-align: center;
   margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 header {
-  background: url(../assets/image-1.jpg) no-repeat;
+  background: url(../assets/headerPhoto.jpg) no-repeat;
   background-size: cover;
   height: 70vh;
   list-style-type: none;
+}
+@media (max-width: 526px) {
+  header {
+    height: 50vh;
+  }
 }
 header .title {
   display: -webkit-box;
@@ -379,10 +401,23 @@ header .title {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-top: 180px;
-  padding-left: 100px;
+  padding-top: 200px;
+  padding-left: 150px;
   -webkit-animation: slideInH1 2s;
           animation: slideInH1 2s;
+}
+@media (max-width: 800px) {
+  header .title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+  }
 }
 
 @-webkit-keyframes slideInH1 {
@@ -451,12 +486,17 @@ header .title {
   list-style-type: none;
 }
 .navBar .slideOutNav nav li {
-  padding: 25px;
+  padding: 25px 0;
 }
 .navBar .slideOutNav nav a {
   color: #d1cec2;
   text-decoration: none;
   padding-left: 50px;
+}
+@media (max-width: 500px) {
+  .navBar .slideOutNav nav a {
+    padding: 0px;
+  }
 }
 .navBar .slideOutNav .mainMenu a {
   font-size: 3rem;
@@ -487,6 +527,11 @@ header .title {
   position: relative;
   width: 100%;
 }
+.banner button {
+  width: 15%;
+  min-width: 130px;
+  font-size: clamp(1rem, 1vw, 1.6rem);
+}
 .banner .bannerContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -500,7 +545,7 @@ header .title {
           flex-direction: column;
 }
 .banner p {
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 2vw, 3rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,6 +555,7 @@ header .title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .myWork {
@@ -525,6 +571,16 @@ header .title {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 800px) {
+  .myWork {
+    height: 60vh;
+  }
+}
+@media (max-width: 526px) {
+  .myWork {
+    height: 80vh;
+  }
+}
 .myWork .myWorkContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,15 +595,8 @@ header .title {
   -ms-flex-line-pack: center;
       align-content: center;
 }
-.myWork .myWorkContent .rotate {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
 .myWork .myWorkContent h3 {
   padding-bottom: 50px;
-}
-.myWork .myWorkContent .arrow {
-  color: #3a3734;
 }
 .myWork .myWorkContent .projectGallery {
   display: -webkit-box;
@@ -564,6 +613,25 @@ header .title {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+@media (max-width: 526px) {
+  .myWork .myWorkContent .projectGallery {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .myWork .myWorkContent .projectGallery .bottomRow {
+    margin: 0px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .myWork .myWorkContent .projectGallery .topRow {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
 .myWork .myWorkContent .bottomRow,
 .myWork .myWorkContent .topRow {
   display: -webkit-box;
@@ -578,6 +646,24 @@ header .title {
 .myWork .myWorkContent .bottomRow img,
 .myWork .myWorkContent .topRow img {
   max-width: 90%;
+}
+@media (max-width: 526px) {
+  .myWork .myWorkContent .bottomRow,
+.myWork .myWorkContent .topRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px;
+    gap: 10px;
+  }
+  .myWork .myWorkContent .bottomRow .project,
+.myWork .myWorkContent .topRow .project {
+    width: 80%;
+  }
 }
 .myWork .myWorkContent .bottomRow {
   margin-top: 30px;
@@ -599,6 +685,12 @@ header .title {
   height: 100%;
   color: #bebbae;
   background: #384423;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+  font-size: 1.8rem;
+}
+.project .overlay .overlayContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,12 +704,13 @@ header .title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
-  opacity: 0;
-  -webkit-transition: opacity 0.8s;
-  transition: opacity 0.8s;
-  font-size: 1.8rem;
+  height: 100%;
+  font-size: clamp(0.7rem, 1vw, 1.8rem);
+}
+.project .overlay .overlayContent p {
+  margin: 0;
 }
 .project .overlay .siteLinks {
   display: -webkit-box;
@@ -631,11 +724,15 @@ header .title {
 .project .overlay:hover {
   opacity: 1;
 }
-.project .overlay:hover h3, .project .overlay:hover p {
+.project .overlay:hover h4,
+.project .overlay:hover p,
+.project .overlay:hover .siteLinks {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
-.project .overlay h3, .project .overlay p {
+.project .overlay h4,
+.project .overlay p,
+.project .overlay .siteLinks {
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
   -webkit-transition: -webkit-transform 0.8s;
@@ -643,48 +740,52 @@ header .title {
   transition: transform 0.8s;
   transition: transform 0.8s, -webkit-transform 0.8s;
 }
-.project .overlay h3 {
+.project .overlay h4 {
   margin: 0;
-  font-size: 3rem;
+  font-size: clamp(0.8rem, 2vw, 3rem);
 }
 
 .mySkills {
   height: 80vh;
-  font-size: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-size: clamp(1.6rem, 2vw, 3rem);
 }
-.mySkills .mySkillsContent {
-  height: 60vh;
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 20px;
+@media (max-width: 800px) {
+  .mySkills {
+    height: 60vh;
+  }
+  .mySkills h3 {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .mySkills {
+    height: 70vh;
+  }
+  .mySkills h3 {
+    padding-top: 50px;
+  }
 }
 .mySkills i {
-  font-size: 5rem;
+  font-size: clamp(2rem, 3vw, 5rem);
 }
 .mySkills .skillsContainer {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.mySkills .skill {
+  padding: 10px;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,30 +793,22 @@ header .title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-}
-.mySkills .skillsContainer .topSkills, .mySkills .skillsContainer .bottomSkills {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  list-style-type: none;
-  text-align: center;
+  -ms-flex-preferred-size: 17%;
+      flex-basis: 17%;
 }
-.mySkills .skillsContainer .bottomSkills {
-  padding-top: 30px;
-  gap: 20px;
+@media (max-width: 526px) {
+  .mySkills .skill {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+  }
 }
-.mySkills .skillsContainer .skillsList {
+.mySkills .skillsList {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -725,6 +818,12 @@ header .title {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 6% auto;
 }
 
 .contact {
@@ -740,10 +839,15 @@ header .title {
           justify-content: space-evenly;
   background-color: #d1cec2;
 }
+.contact h3 {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(3rem, 3vw, 5rem);
+}
 .contact p {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 2vw, 2rem);
   margin: 0;
-  width: 50%;
+  width: 75%;
   text-align: center;
 }
 .contact .sectionItems {
@@ -764,6 +868,12 @@ header .title {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
+  width: 50%;
+}
+@media (max-width: 800px) {
+  .contact .sectionItems {
+    width: 95%;
+  }
 }
 .contact .formContainer {
   display: -webkit-box;
@@ -776,7 +886,7 @@ header .title {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  width: 100vh;
+  width: 100%;
   margin: 0 auto;
 }
 .contact .formContainer form {
@@ -852,6 +962,12 @@ header .title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+}
+@media (max-width: 800px) {
+  .about {
+    height: 55vh;
+  }
 }
 .about .aboutContent {
   height: 30vh;
@@ -868,8 +984,19 @@ header .title {
       align-content: center;
   gap: 20px;
 }
-.about p {
-  font-size: 1.9rem;
+@media (max-width: 800px) {
+  .about .aboutContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .aboutContent .content {
+    width: 80%;
+  }
 }
 .about .content {
   width: 40%;
@@ -888,5 +1015,5 @@ header .title {
   width: 30%;
   background-color: #384423;
   color: #d1cec2;
-  min-width: 150px;
+  min-width: 115px;
 }
