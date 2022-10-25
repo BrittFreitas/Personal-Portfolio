@@ -973,19 +973,22 @@ header .title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 .thanksPage h1 {
   color: #384423;
-  font-size: 6rem;
+  font-size: clamp(2.5rem, 5vw, 6rem);
   text-transform: none;
 }
 .thanksPage i {
-  font-size: 7rem;
+  font-size: clamp(2rem, 6vw, 7rem);
   padding: 20px;
 }
 .thanksPage p {
-  font-size: 2.5rem;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
   font-style: italic;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .about {
