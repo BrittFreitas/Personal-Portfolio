@@ -309,7 +309,7 @@ button:focus {
 footer {
   background-color: #384423;
   color: #d1cec2;
-  height: 20vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -793,7 +793,7 @@ header .title {
 }
 @media (max-width: 500px) {
   .mySkills {
-    height: 70vh;
+    height: 80vh;
   }
   .mySkills h3 {
     padding-top: 50px;
@@ -858,10 +858,11 @@ header .title {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 6% auto;
+  padding: 0;
 }
 
 .contact {
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
