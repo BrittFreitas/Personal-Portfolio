@@ -63,12 +63,13 @@ button {
   position: relative;
   min-width: 75px;
   &:hover {
-    background: rgb(202, 202, 176, 0.6);
+    background: $backgroundColor;
     border: 1px solid $beige;
     color: $primaryColor;
   }
   &:focus {
     background-color: $backgroundColor;
-    color: $green;
+    color: $primaryColor;
+    border: 1px solid $beige;
   }
 }
