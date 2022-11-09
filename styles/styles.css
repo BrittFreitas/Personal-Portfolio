@@ -549,6 +549,8 @@ header .title {
 }
 .banner p {
   font-size: clamp(1.6rem, 2vw, 3rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
