@@ -447,6 +447,7 @@ header .title {
   position: fixed;
   top: 30px;
   right: 5%;
+  display: none;
 }
 .navBar .menuIcon,
 .navBar .exit {
