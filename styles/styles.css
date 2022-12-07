@@ -247,7 +247,7 @@ h1 {
   font-family: "Red Hat Display", sans-serif;
   text-transform: uppercase;
   color: #3a3734;
-  font-size: clamp(4rem, 10vw, 10rem);
+  font-size: clamp(7rem, 10vw, 15rem);
   font-weight: 400;
   margin: 0;
   display: -webkit-box;
@@ -257,7 +257,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  line-height: 0.8;
+  line-height: 0.9;
 }
 
 h2 {
@@ -385,13 +385,8 @@ footer .fa-copyright {
 header {
   background: url(../assets/headerPhoto.jpg) no-repeat;
   background-size: cover;
-  height: 70vh;
+  height: 100vh;
   list-style-type: none;
-}
-@media (max-width: 526px) {
-  header {
-    height: 50vh;
-  }
 }
 header .title {
   display: -webkit-box;
@@ -401,10 +396,10 @@ header .title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-top: 200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
   padding-left: 150px;
   -webkit-animation: slideInH1 2s;
           animation: slideInH1 2s;
@@ -497,20 +492,20 @@ header .title {
   padding-left: 50px;
 }
 @media (max-width: 500px) {
-  .navBar .slideOutNav nav a {
+  .navBar .slideOutNav nav a a {
     padding: 0px;
   }
 }
-.navBar .slideOutNav .mainMenu a {
+.navBar .slideOutNav nav .mainMenu a {
   font-size: 3rem;
 }
-.navBar .slideOutNav .mainMenu a:hover {
+.navBar .slideOutNav nav .mainMenu a:hover {
   color: #bebbae;
 }
-.navBar .slideOutNav .mainMenu a:focus {
+.navBar .slideOutNav nav .mainMenu a:focus {
   color: #bebbae;
 }
-.navBar .slideOutNav.open {
+.navBar .slideOutNav nav.open {
   right: 0px;
 }
 

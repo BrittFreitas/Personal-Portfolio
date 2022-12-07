@@ -20,12 +20,12 @@ h1 {
   font-family: "Red Hat Display", sans-serif;
   text-transform: uppercase;
   color: $primaryColor;
-  font-size: clamp(4rem, 10vw, 10rem);
+  font-size: clamp(7rem, 10vw, 15rem);
   font-weight: 400;
   margin: 0;
   display: flex;
   flex-direction: column;
-  line-height: 0.8;
+  line-height: 0.9;
 }
 
 h2 {

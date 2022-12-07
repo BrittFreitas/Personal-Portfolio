@@ -12,10 +12,9 @@ header {
   .title {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-top: 200px;
+    justify-content: center;
+    height: 100%;
     padding-left: 150px;
-
     animation: slideInH1 2s;
 
     @include tablet {
@@ -109,4 +108,5 @@ header {
       right: 0px;
     }
   }
+}
 }
