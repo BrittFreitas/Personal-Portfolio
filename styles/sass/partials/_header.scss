@@ -4,12 +4,10 @@
 header {
   background: url(../assets/headerPhoto.jpg) no-repeat;
   background-size: cover;
-  height: 70vh;
+  height: 100vh;
   list-style-type: none;
 
-  @include mobileLarge {
-    height: 50vh;
-  }
+  
 
   .title {
     display: flex;
@@ -90,7 +88,8 @@ header {
         padding-left: 50px;
 
         @include mobile {
-          padding: 0px;
+          a {
+            padding: 0px;
         }
       }
     }
