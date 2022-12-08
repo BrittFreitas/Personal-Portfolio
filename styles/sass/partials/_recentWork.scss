@@ -2,18 +2,23 @@
 @use "./mixins" as *;
 
 .myWork {
-  height: 100vh;
+  //height: 100vh;
   background-color: $beige;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px 0px;
 
   @include tablet {
-    height: 60vh;
+    //height: 60vh;
+
+    .myWorkContent {
+      margin: 0;
+    }
   }
 
   @include mobileLarge {
-    height: 80vh;
+    //height: 80vh;
   }
   .myWorkContent {
     display: flex;
@@ -32,7 +37,7 @@
       justify-content: space-evenly;
 
       @include mobileLarge {
-        flex-direction: row;
+        //flex-direction: row;
 
         .bottomRow {
           margin: 0px;
@@ -65,7 +70,9 @@
         gap: 10px;
 
         .project {
-          width: 80%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
       }
     }
@@ -94,8 +101,12 @@
     color: $backgroundColor;
     background: $green;
     opacity: 0;
-    transition: opacity 0.8s;
+    //transition: opacity 0.8s;
     font-size: 1.8rem;
+    
+    &.show {
+      opacity: 1;
+    }
 
     a {
       color: $beige;
@@ -125,24 +136,24 @@
       }
     }
 
-    &:hover {
-      opacity: 1;
+    // &:hover {
+    //   opacity: 1;
 
-      h4,
-      p,
-      .siteLinks {
-        transform: translateY(0px);
-      }
-    }
-    &:focus {
-      opacity: 1;
+    //   h4,
+    //   p,
+    //   .siteLinks {
+    //     transform: translateY(0px);
+    //   }
+    // }
+    // &:focus {
+    //   opacity: 1;
 
-      h4,
-      p,
-      .siteLinks {
-        transform: translateY(0px);
-      }
-    }
+    //   h4,
+    //   p,
+    //   .siteLinks {
+    //     transform: translateY(0px);
+    //   }
+    // }
 
     h4,
     p,

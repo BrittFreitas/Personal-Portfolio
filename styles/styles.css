@@ -307,13 +307,6 @@ button:focus {
   border: 1px solid #d1cec2;
 }
 
-@font-face {
-  font-family: "archiaregular";
-  src: url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.eot");
-  src: url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.woff2") format("woff2"), url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.woff") format("woff"), url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 footer {
   background-color: #384423;
   color: #d1cec2;
@@ -548,7 +541,6 @@ header .title {
   width: 15%;
   min-width: 200px;
   font-size: clamp(1.8rem, 1vw, 1.6rem);
-  font-family: "archiaregular";
 }
 .banner .bannerContent {
   display: -webkit-box;
@@ -561,7 +553,6 @@ header .title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "archiaregular";
 }
 @media (max-width: 800px) {
   .banner .bannerContent {
@@ -573,7 +564,6 @@ header .title {
 }
 .banner p {
   font-size: clamp(1.6rem, 2vw, 3rem);
-  font-family: "archiaregular";
   font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -594,7 +584,6 @@ header .title {
 }
 
 .myWork {
-  height: 100vh;
   background-color: #d1cec2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -605,15 +594,11 @@ header .title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 30px 0px;
 }
 @media (max-width: 800px) {
-  .myWork {
-    height: 60vh;
-  }
-}
-@media (max-width: 526px) {
-  .myWork {
-    height: 80vh;
+  .myWork .myWorkContent {
+    margin: 0;
   }
 }
 .myWork .myWorkContent {
@@ -649,12 +634,6 @@ header .title {
           justify-content: space-evenly;
 }
 @media (max-width: 526px) {
-  .myWork .myWorkContent .projectGallery {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
   .myWork .myWorkContent .projectGallery .bottomRow {
     margin: 0px;
     -webkit-box-align: start;
@@ -701,7 +680,13 @@ header .title {
   }
   .myWork .myWorkContent .bottomRow .project,
 .myWork .myWorkContent .topRow .project {
-    width: 80%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .myWork .myWorkContent .bottomRow {
@@ -725,9 +710,10 @@ header .title {
   color: #bebbae;
   background: #384423;
   opacity: 0;
-  -webkit-transition: opacity 0.8s;
-  transition: opacity 0.8s;
   font-size: 1.8rem;
+}
+.project .overlay.show {
+  opacity: 1;
 }
 .project .overlay a {
   color: #d1cec2;
@@ -763,24 +749,6 @@ header .title {
 .project .overlay .siteLinks a {
   text-decoration: none;
   color: #bebbae;
-}
-.project .overlay:hover {
-  opacity: 1;
-}
-.project .overlay:hover h4,
-.project .overlay:hover p,
-.project .overlay:hover .siteLinks {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-}
-.project .overlay:focus {
-  opacity: 1;
-}
-.project .overlay:focus h4,
-.project .overlay:focus p,
-.project .overlay:focus .siteLinks {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
 }
 .project .overlay h4,
 .project .overlay p,
@@ -1051,7 +1019,6 @@ header .title {
   }
 }
 .about .aboutContent {
-  height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

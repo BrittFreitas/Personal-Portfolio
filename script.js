@@ -38,3 +38,15 @@ const watchForScroll = new IntersectionObserver( event => {
 
 const projectGallery = document.querySelector('.projectGallery')
 watchForScroll.observe(projectGallery);
+
+
+// const project = document.querySelector('.project')
+// const description = document.querySelector('.overlay')
+
+// project.addEventListener("click", () => {
+//     description.classList.add('show');
+// })
+
+// description.addEventListener("click", () => {
+//     description.classList.remove('show');
+// })
