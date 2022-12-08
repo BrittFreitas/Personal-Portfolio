@@ -8,6 +8,7 @@ html {
 body {
   color: $primaryColor;
   background-color: $backgroundColor;
+  font-family: "archiaregular";
 }
 
 .wrapper {
@@ -39,7 +40,7 @@ h3 {
   font-family: "Red Hat Display", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: clamp(2rem, 5vw, 6rem);
+  font-size: clamp(4rem, 5vw, 6rem);
   margin: 0;
 }
 
@@ -62,6 +63,7 @@ button {
   text-transform: capitalize;
   position: relative;
   min-width: 75px;
+
   &:hover {
     background: $backgroundColor;
     border: 1px solid $beige;
@@ -73,3 +75,15 @@ button {
     border: 1px solid $beige;
   }
 }
+
+@font-face {
+  font-family: 'archiaregular';
+  src: url('../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.eot');
+  src: url('../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.woff2') format('woff2'),
+       url('../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.woff') format('woff'),
+       url('../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

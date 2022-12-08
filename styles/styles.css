@@ -235,6 +235,7 @@ html {
 body {
   color: #3a3734;
   background-color: #bebbae;
+  font-family: "archiaregular";
 }
 
 .wrapper {
@@ -271,7 +272,7 @@ h3 {
   font-family: "Red Hat Display", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: clamp(2rem, 5vw, 6rem);
+  font-size: clamp(4rem, 5vw, 6rem);
   margin: 0;
 }
 
@@ -307,6 +308,13 @@ button:focus {
   border: 1px solid #d1cec2;
 }
 
+@font-face {
+  font-family: "archiaregular";
+  src: url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.eot");
+  src: url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.woff2") format("woff2"), url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.woff") format("woff"), url("../../../Archia_Regular/Archia_Regular/ArchiaRegularWebfont/archia-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 footer {
   background-color: #384423;
   color: #d1cec2;
@@ -387,6 +395,9 @@ header {
   background-size: cover;
   height: 100vh;
   list-style-type: none;
+}
+header .arrowDown {
+  font-size: 10rem;
 }
 header .title {
   display: -webkit-box;
@@ -526,10 +537,18 @@ header .title {
   position: relative;
   width: 100%;
 }
+@media (max-width: 800px) {
+  .banner {
+    height: 100vh;
+  }
+  .banner p {
+    margin: 0px 10px;
+  }
+}
 .banner button {
   width: 15%;
-  min-width: 130px;
-  font-size: clamp(1rem, 1vw, 1.6rem);
+  min-width: 200px;
+  font-size: clamp(1.8rem, 1vw, 1.6rem);
 }
 .banner .bannerContent {
   display: -webkit-box;
@@ -542,10 +561,19 @@ header .title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "archiaregular";
+}
+@media (max-width: 800px) {
+  .banner .bannerContent {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 15px;
+  }
 }
 .banner p {
   font-size: clamp(1.6rem, 2vw, 3rem);
-  font-family: "Playfair Display", serif;
+  font-family: "archiaregular";
   font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -557,6 +585,12 @@ header .title {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .banner p {
+    font-size: clamp(5.9rem, 2vw, 3rem);
+    text-align: left;
+  }
 }
 
 .myWork {
@@ -1009,11 +1043,11 @@ header .title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  font-size: clamp(1.9em, 2vw, 1.9rem);
 }
 @media (max-width: 800px) {
   .about {
-    height: 55vh;
+    min-height: 80vh;
   }
 }
 .about .aboutContent {
@@ -1037,12 +1071,10 @@ header .title {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-left: 25px;
   }
   .about .aboutContent .content {
-    width: 80%;
+    width: 95%;
   }
 }
 .about .content {
@@ -1058,9 +1090,22 @@ header .title {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 800px) {
+  .about .content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 .about button {
   width: 30%;
   background-color: #384423;
   color: #d1cec2;
   min-width: 115px;
+}
+@media (max-width: 800px) {
+  .about button {
+    min-width: 200px;
+    font-size: clamp(1.8rem, 1vw, 1.6rem);
+  }
 }

@@ -5,10 +5,10 @@
   height: 80vh;
   display: flex;
   align-items: center;
-  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  font-size: clamp(1.9em, 2vw, 1.9rem);
 
   @include tablet {
-    height: 55vh;
+    min-height: 80vh;
   }
 
   .aboutContent {
@@ -21,10 +21,12 @@
 
     @include tablet {
       flex-direction: column;
-      align-items: center;
+      margin-left: 25px;
+      
 
       .content {
-        width: 80%;
+        width: 95%;
+       
       }
     }
   }
@@ -34,11 +36,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet {
+      align-items: flex-start;
+    }
   }
   button {
     width: 30%;
     background-color: $green;
     color: $beige;
     min-width: 115px;
+
+    @include tablet {
+      min-width: 200px;
+      font-size: clamp(1.8rem, 1vw, 1.6rem);
+    }
   }
 }
