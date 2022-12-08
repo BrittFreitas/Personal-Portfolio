@@ -49,7 +49,7 @@
     text-align: center;
 
     @include tablet {
-      font-size: clamp(5.9rem, 2vw, 3rem);
+      font-size: clamp(5rem, 2vw, 3rem);
       text-align: left;
     }
   }

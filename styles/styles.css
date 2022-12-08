@@ -588,7 +588,7 @@ header .title {
 }
 @media (max-width: 800px) {
   .banner p {
-    font-size: clamp(5.9rem, 2vw, 3rem);
+    font-size: clamp(5rem, 2vw, 3rem);
     text-align: left;
   }
 }
@@ -1047,7 +1047,7 @@ header .title {
 }
 @media (max-width: 800px) {
   .about {
-    min-height: 80vh;
+    min-height: 90vh;
   }
 }
 .about .aboutContent {
@@ -1074,7 +1074,7 @@ header .title {
     margin-left: 25px;
   }
   .about .aboutContent .content {
-    width: 95%;
+    width: 80%;
   }
 }
 .about .content {

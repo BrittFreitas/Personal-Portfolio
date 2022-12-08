@@ -8,7 +8,7 @@
   font-size: clamp(1.9em, 2vw, 1.9rem);
 
   @include tablet {
-    min-height: 80vh;
+    min-height: 90vh;
   }
 
   .aboutContent {
@@ -25,7 +25,7 @@
       
 
       .content {
-        width: 95%;
+        width: 80%;
        
       }
     }
