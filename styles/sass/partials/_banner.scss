@@ -2,7 +2,7 @@
 @use "./mixins" as *;
 
 .banner {
-  height: 30vh;
+  height: 60vh;
   background-color: $green;
   color: beige;
   display: flex;
@@ -23,6 +23,7 @@
     width: 15%;
     min-width: 200px;
     font-size: clamp(1.8rem, 1vw, 1.6rem);
+    opacity: 60%;
   
   }
 
