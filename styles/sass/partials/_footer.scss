@@ -12,6 +12,7 @@ footer {
 
   p, a, i {
     font-size: clamp(2.2rem, 2vw, 2rem);
+    color: $beige;
   }
   .footerContent {
     display: flex;
