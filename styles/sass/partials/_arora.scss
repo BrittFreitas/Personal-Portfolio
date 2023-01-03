@@ -19,7 +19,7 @@
         text-align: left;
 
         @include tablet {
-            width:  90%;
+            max-width:  90%;
         }
 
         @include mobileLarge {

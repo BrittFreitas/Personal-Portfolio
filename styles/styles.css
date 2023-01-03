@@ -1113,7 +1113,7 @@ header .title {
 }
 @media (max-width: 800px) {
   .projdeets h2 {
-    width: 90%;
+    max-width: 90%;
   }
 }
 @media (max-width: 526px) {
